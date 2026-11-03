@@ -22,7 +22,7 @@ XML-конфигурациях ячеек (`/opt/oracle.cellos/cell.conf`). Ис
 | Файл | Назначение |
 |---|---|
 | `update_cell_conf.sh` | сам скрипт (bash + awk, зависимостей нет) |
-| `R3_preconf_ex9s_example.csv` | база preconf: по строке на сервер |
+| `preconf.csv` | база preconf: по строке на сервер |
 | `cell_conf/cell_<hostname>.conf` | исходные конфиги ячеек (только чтение) |
 | `cell_conf/cell_<hostname>_new.conf` | результат работы скрипта |
 | `cell_conf/sum.md5` | контрольные суммы исходных конфигов |
