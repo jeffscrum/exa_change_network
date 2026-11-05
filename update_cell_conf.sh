@@ -3,7 +3,7 @@
 # update_cell_conf.sh — смена management-сети (eth0), ILOM, DNS/NTP и таймзоны
 # в XML-конфигурациях ячеек Exadata по базе Oracle OneCommand preconf (R3).
 #
-# Вход:  preconf CSV (по умолчанию R3_preconf_ex9s_example.csv) и каталог
+# Вход:  preconf CSV (по умолчанию preconf.csv) и каталог
 #        исходных конфигов (по умолчанию cell_conf/).
 # Выход: cell_conf/cell_<hostname>_new.conf — исходные *.conf не изменяются.
 #
@@ -41,7 +41,7 @@ usage() {
                 уже существующего
 
 Аргументы:
-  csv        база preconf (по умолчанию: $SCRIPT_DIR/R3_preconf_ex9s_example.csv)
+  csv        база preconf (по умолчанию: $SCRIPT_DIR/preconf.csv)
   conf_dir   каталог исходных конфигов cell_<hostname>.conf
              (по умолчанию: $SCRIPT_DIR/cell_conf)
 
@@ -73,7 +73,7 @@ if [ ${#ARGS[@]} -eq 0 ] && [ "$DRY" -eq 0 ]; then
   exit 0
 fi
 
-CSV=${ARGS[0]:-$SCRIPT_DIR/R3_preconf_ex9s_example.csv}
+CSV=${ARGS[0]:-$SCRIPT_DIR/preconf.csv}
 CONF_DIR=${ARGS[1]:-$SCRIPT_DIR/cell_conf}
 
 if [ ! -f "$CSV" ]; then
