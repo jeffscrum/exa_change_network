@@ -53,8 +53,8 @@ NTP и таймзону в XML-конфигурациях ячеек Exadata (`c
 
 ```bash
 ./update_cell_conf.sh                                      # только справка
-./update_cell_conf.sh -dry R3_preconf_ex9s.csv cell_conf   # контрольный прогон
-./update_cell_conf.sh    R3_preconf_ex9s.csv cell_conf     # записать _new.conf
+./update_cell_conf.sh --dry R3_preconf_ex9s.csv cell_conf  # контрольный прогон
+./update_cell_conf.sh       R3_preconf_ex9s.csv cell_conf  # записать _new.conf
 ```
 
 На синтетическом наборе прогон завершается без ошибок и предупреждений:
